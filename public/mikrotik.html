@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="2Aj5sGvUyPllCGMHaB10Uw5WFPurKJz3gjaM-MZoUd0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/saepul-idn/dev-api@main/saepul-idn.web.app/style.css">
+    <title>saepul-idn</title>
+</head>
+<body>
+    <div class="container">
+        <header class="headme">
+            <h1 class="primary">saepul 
+                <span class="secondary">idn</span>
+            </h1>
+            <nav class="navbar-blog">
+                <a href="https://saepul-idn.web.app/" class="navme">Home</a>
+            </nav>
+        </header>
+
+        <!-- artikel-txt -->
+        <div class="container-1" id="Home">
+            <article >              
+                <img src="../img/mikrotik.jpg" alt=""><h1>Setup<span> Mikrotik</span></h1>
+                <div id="artikel-txt">
+                    <!-- Tempat data txt akan dimuat -->
+                </div>
+            </article>
+        </div>
+
+        <!-- footer -->
+        <div class="container-1">
+            <footer>
+                <p style="text-align: center; color: brown;">Copy
+                    <span style="color: rgb(121, 107, 107);">Right</span>
+                    <span>@iming</span>
+                </p>
+                <a href=""></a>
+            </footer>
+        </div>
+    </div>
+</body>
+
+ <!-- txt -->
+ <script>
+    // Fungsi untuk mengambil dan menampilkan teks artikel
+    async function fetchArtikel_txt() {
+      try {
+        const response = await fetch('./txt/artikel/mikrotik.txt'); // Ganti dengan path yang benar
+        const teksArtikel = await response.text();
+
+        // Panggil fungsi untuk menampilkan teks di halaman HTML
+        tampilkanArtikel_txt(teksArtikel);
+      } catch (error) {
+        console.error('Terjadi kesalahan:', error);
+      }
+    }
+
+    // Fungsi untuk menampilkan teks di halaman HTML
+    function tampilkanArtikel_txt(teks) {
+      const artikelContainer = document.getElementById('artikel-txt');
+
+      // Pisahkan teks menjadi paragraf berdasarkan baris baru
+      const paragraf = teks.split('\n');
+
+      // Tambahkan setiap paragraf ke dalam div
+      paragraf.forEach(p => {
+        const elemenParagraf = document.createElement('p');
+        elemenParagraf.textContent = p;
+        artikelContainer.appendChild(elemenParagraf);
+      });
+    }
+
+    // Panggil fungsi untuk menampilkan teks saat halaman dimuat
+    fetchArtikel_txt();
+  </script>
+
+  <!-- firebase -->
+<script type="module">
+const _0x185bd5=_0x3ce4;(function(_0x20366a,_0x2a7dc3){const _0x137ec3=_0x3ce4,_0x1269c3=_0x20366a();while(!![]){try{const _0xce7323=parseInt(_0x137ec3(0x135))/0x1*(-parseInt(_0x137ec3(0x140))/0x2)+-parseInt(_0x137ec3(0x134))/0x3+-parseInt(_0x137ec3(0x142))/0x4*(parseInt(_0x137ec3(0x133))/0x5)+-parseInt(_0x137ec3(0x132))/0x6*(parseInt(_0x137ec3(0x13b))/0x7)+-parseInt(_0x137ec3(0x138))/0x8+-parseInt(_0x137ec3(0x137))/0x9*(parseInt(_0x137ec3(0x13d))/0xa)+-parseInt(_0x137ec3(0x136))/0xb*(-parseInt(_0x137ec3(0x139))/0xc);if(_0xce7323===_0x2a7dc3)break;else _0x1269c3['push'](_0x1269c3['shift']());}catch(_0x5bc1b0){_0x1269c3['push'](_0x1269c3['shift']());}}}(_0x45d4,0xb1d08));function _0x45d4(){const _0x58d73c=['133OXmgaH','1:554827602544:web:5097e5f4be8baf170af2b5','2419930ahsGsE','saepul-idn.firebaseapp.com','554827602544','4oSyWfG','saepul-idn','2932964VsjZAl','saepul-idn.appspot.com','G-2LYG87VVJ0','58512mUllnv','5vSngAT','494772AhAOVK','86923hvnRSz','627FthTTU','9ydIHbX','4006392aiecNW','574404nULGox','AIzaSyCsWJ37Cp-2yTd_fI1J-Rdgw3UCAf3sAoI'];_0x45d4=function(){return _0x58d73c;};return _0x45d4();}import{initializeApp}from'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';function _0x3ce4(_0x1e1c1c,_0x317b3f){const _0x45d42f=_0x45d4();return _0x3ce4=function(_0x3ce442,_0x44e96c){_0x3ce442=_0x3ce442-0x132;let _0x2df193=_0x45d42f[_0x3ce442];return _0x2df193;},_0x3ce4(_0x1e1c1c,_0x317b3f);}import{getAnalytics}from'https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js';const firebaseConfig={'apiKey':_0x185bd5(0x13a),'authDomain':_0x185bd5(0x13e),'projectId':_0x185bd5(0x141),'storageBucket':_0x185bd5(0x143),'messagingSenderId':_0x185bd5(0x13f),'appId':_0x185bd5(0x13c),'measurementId':_0x185bd5(0x144)},app=initializeApp(firebaseConfig),analytics=getAnalytics(app);
+</script>
+
+ 
+</html>
